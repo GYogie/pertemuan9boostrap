@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo officia maiores doloremque sit obcaecati odit! lorem 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti provident reiciendis quae blanditiis ducimus dicta amet
+         facere tenetur expedita voluptatibus soluta, officiis libero ratione eos iure aspernatur ipsum, accusantium ve
+         niam itaque vero nisi dolorem? Tempore libero, repudiandae alias modi eum repellendus blanditiis dignissimos vol
+          provident, mollitia omnis sint, quis doloremque deleniti eligendi quasi iste. Fuga cumque aliquam aut commodi dolorum accusamus
+           harum ullam provident temporibus, placeat nihil suscipit sequi in adipisci asperiores, pariatur inventore natus odit beatae consequatur accusantium odio animi dignissimos reiciendis! Id, mollitia.</p>
+   
+           <button id="munculteks">Tampilkan teks</button>
+           <button id="sembunyiteks">Sembunyikan teks</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+        //hide teks dan button sembunyi
+
+            $('p').hide()
+           $('#sembunyiteks').hide()
+
+        //p muncul button ganti ke sembunyi
+           
+           $('#munculteks').on('click',function(){
+            $('p').show(300)
+            $(this).hide()
+            $('#sembunyiteks').show()
+           })
+
+        //p sembunyi button ganti ke muncul
+
+           $('#sembunyiteks').on('click',function(){
+            $('p').hide(300)
+            $(this).hide()
+            $('#munculteks').show()
+           })
+         })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi DOM dengan jQuery</title>
+</head>
+<body>
+   
+    <div>
+        <h3>Hitung Luas Persegi</h3>
+        <div>
+            Nilai panjang <input type="text" id="panjang">
+        </div>
+        <div>
+            Nilai lebar <input type="text" id="lebar">
+        </div>
+        <div>
+            Hitung luas <button id="hitung">hitung luas</button>
+        </div>
+        <span class="hasil">Hasil</span>
+
+    </div>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#hitung').on('click',function(){
+                let PJ = $('#panjang').val()
+                let LB = $('#lebar').val()
+
+                let HL = PJ * LB
+
+                let info = "Luas Persegi <br>"
+                info += "Luas = Panjang X Lebar <br>"
+                info += "Luas = "+pj +" X "+lb +"<br>"
+                info += "Luas = "+ HL
+
+                $('.hasil').html(info)
+            })
+
+        })
+    </script>
+
+</body>
+</html>
